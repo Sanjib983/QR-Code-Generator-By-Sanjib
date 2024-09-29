@@ -1,0 +1,15 @@
+My Website : https://sanjibkobir.vercel.app/
+
+
+Summary of Tools and Files Used:
+
+1. HTML: Used to create the structure of the page, including an input field, a button, and a div to display the QR code.
+2. QRCode.js: A JavaScript library from cdnjs used for generating QR codes.
+3. JavaScript: Handles the logic to capture input, validate it, and use the QRCode.js library to generate the QR code.
+4. CSS (optional): Can be used to style the page (though not necessary for basic functionality).
+
+
+Conclusion:
+This simple QR Code Generator uses HTML for structure, QRCode.js for generating the QR code, and JavaScript for handling the logic. You can easily integrate it into any web project. Feel free to customize the design using CSS for a more polished look.
+
+Created by: Sanjib Kobir

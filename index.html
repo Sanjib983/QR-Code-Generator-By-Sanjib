@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/image/qrlogo.jfif">
+</head>
+<body>
+    <div id="header">
+        <div class="flexrow-container">
+            <div class="standard-theme theme-selector" onclick="changeTheme('standard')"></div>
+            <div class="light-theme theme-selector" onclick="changeTheme('light')"></div>
+            <div class="darker-theme theme-selector" onclick="changeTheme('darker')"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <input type="text" id="input-text" placeholder="Enter text or URL">
+        <div id="qrcode"></div>
+        <button id="generate-btn">Generate QR Code</button>
+    </div>
+
+    <!-- Use the correct QRCode library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

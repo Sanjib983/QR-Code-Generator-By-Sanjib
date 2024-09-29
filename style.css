@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background: linear-gradient(135deg, #a8d8e8, #f0f4f7);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#header {
+    width: 100%;
+    position: absolute; /* Fix header at the top */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    z-index: 1; /* Ensure header is above other elements */
+}
+
+.flexrow-container {
+    display: flex;
+    justify-content: center; /* Center the button container */
+    align-items: center; /* Center the buttons vertically */
+    gap: 10px; /* Add space between buttons */
+    width: auto; /* Allow it to adjust based on content */
+}
+
+.theme-selector {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make buttons rounded */
+    cursor: pointer;
+    border: 2px solid #5aa97a; /* Add border to color change buttons */
+    transition: transform 0.3s;
+}
+
+.theme-selector:hover {
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    margin-top: 80px; /* Add margin top to avoid overlap with header */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    z-index: 0; /* Ensure container is below the header */
+}
+
+h1 {
+    background: linear-gradient(135deg, #2f4548, #5aa97a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+    margin: 0;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #2f4548, #5aa97a);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(70deg, #2f4548, #5aa97a);
+    transform: scale(1.05);
+}
+
+/* Animation for QR Code generation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.qr-code {
+    opacity: 0;
+    animation: showQRCode 0.5s forwards;
+}
+
+@keyframes showQRCode {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Full width for small screens */
+    }
+    h1 {
+        font-size: 1.5em; /* Adjust header size for smaller screens */
+    }
+    .theme-selector {
+        width: 40px; /* Adjust button size */
+        height: 40px;
+    }
+    button {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+body {
+    transition: background-image 0.3s linear, color 0.3s linear;
+}
+
+/* Light or darker themes */
+.standard {
+    background-image: linear-gradient(120deg, #4b6cb7, #182848);
+    color: #ffdfdb;
+}
+
+.light {
+    background-image: linear-gradient(120deg, #ffe1a8, #f9f9f9);
+    color: #2d2d2d;
+}
+
+.darker {
+    background-image: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.standard-theme {
+    background-image: linear-gradient(100deg, #4b6cb7, #182848);
+}
+
+.light-theme {
+    background-image: linear-gradient(100deg, #ffe1a8, #f9f9f9);
+}
+
+.darker-theme {
+    background-image: linear-gradient(100deg, #0f2027, #203a43, #2c5364);
+}
